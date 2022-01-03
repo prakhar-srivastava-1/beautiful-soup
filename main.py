@@ -26,3 +26,16 @@ print(heading1_with_id_name)
 
 heading3_with_class_heading = soup.find(name="h3", class_="heading")
 print(heading3_with_class_heading)
+
+# Extract nested tags
+# uses css selector
+company_url = soup.select_one(selector="p a")
+print(company_url.get("href"))
+
+# use id
+name = soup.select_one(selector="#name")
+print(name.text)
+
+# use class
+heading = soup.select(selector=".heading")
+print(heading)
