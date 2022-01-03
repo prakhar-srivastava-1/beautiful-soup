@@ -9,4 +9,9 @@ soup = BeautifulSoup(contents, 'html.parser')
 print(soup.title.name + ":\t" + soup.title.string)
 print("First p tag:\n" + str(soup.p))
 
+# get all <a> tags
+all_anchor_tags = soup.find_all(name='a')
+# list of all anchor tags
+print(all_anchor_tags)
+
 
