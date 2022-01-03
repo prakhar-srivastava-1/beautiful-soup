@@ -14,4 +14,10 @@ all_anchor_tags = soup.find_all(name='a')
 # list of all anchor tags
 print(all_anchor_tags)
 
+# Extract
+# 1. text between <a>TEXT</a>
+# 2. href link
+for anchor_tag in all_anchor_tags:
+    print(anchor_tag.string, ":", anchor_tag.get("href"))
+
 
