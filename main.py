@@ -20,4 +20,9 @@ print(all_anchor_tags)
 for anchor_tag in all_anchor_tags:
     print(anchor_tag.string, ":", anchor_tag.get("href"))
 
+# Extract based on attribute value
+heading1_with_id_name = soup.find(name="h1", id="name")
+print(heading1_with_id_name)
 
+heading3_with_class_heading = soup.find(name="h3", class_="heading")
+print(heading3_with_class_heading)
